@@ -28,6 +28,12 @@ document.getElementById('send-button').addEventListener('click', function() {
     }
 });
 
+document.getElementById('roll-dice').addEventListener('click', function () {
+    const result = Math.floor(Math.random() * 20) + 1;
+    document.getElementById('dice-result').textContent = `You rolled a ${result}!`;
+});
+
+
 function showGameSection() {
     document.getElementById('login-section').style.display = 'none';
     document.getElementById('register-section').style.display = 'none';
